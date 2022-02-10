@@ -13,6 +13,12 @@ class ExternalDecompiler(object):
         self.path_to_decompiler = path_to_decompiler
         self.command = command
 
+class Jadx(ExternalDecompiler):
+    def __init__(self):
+        ExternalDecompiler.__init__(self,
+                name="jadx",
+                path_to_decompiler="/bin/jadx"),
+                command="{path_to_decompiler} --deobf --outputdir {build_directory}/jadx")
 
 class CFR(ExternalDecompiler):
     def __init__(self):
