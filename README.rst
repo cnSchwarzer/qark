@@ -2,11 +2,11 @@ Changes done in this fork and how to use
 ========================
 needed to make a python venv with python3.7
 
-changed all external decompilers to latest on 02/10/2022
-added jadx to external decompilers
-apktool update to 2.6.0
-dex2jar update to 2.1.0
-some python dependencies didnt resolv or work, so i updated just those
+- changed all external decompilers to latest on 02/10/2022
+- added jadx to external decompilers
+- apktool update to 2.6.0
+- dex2jar update to 2.1.0
+- some python dependencies didnt resolv or work, so i updated just those
 
 Quick Android Review Kit
 ========================
