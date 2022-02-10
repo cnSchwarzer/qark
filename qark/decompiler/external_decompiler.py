@@ -16,16 +16,16 @@ class ExternalDecompiler(object):
 class Jadx(ExternalDecompiler):
     def __init__(self):
         ExternalDecompiler.__init__(self,
-                name="jadx",
-                path_to_decompiler="/bin/jadx"),
-                command="{path_to_decompiler} --deobf --outputdir {build_directory}/jadx")
+                                    name="jadx",
+                                    path_to_decompiler="/bin/jadx",
+                                    command="{path_to_decompiler} --deobf --outputdir {build_directory}/jadx")
 
 class CFR(ExternalDecompiler):
     def __init__(self):
         ExternalDecompiler.__init__(self,
                                     name="cfr",
-                                    path_to_decompiler=os.path.join(PATH_TO_DECOMPILERS, "cfr_0_152.jar"),
-                                    command="java -jar {path_to_decompiler} {jar} --outputdir {build_directory}/cfr")
+                                    path_to_decompiler=os.path.join(PATH_TO_DECOMPILERS, "cfr-0.152.jar"),
+                                    command="java -jar {path_to_decompiler} {jar} --antiobf --outputdir {build_directory}/cfr")
 
 
 class Procyon(ExternalDecompiler):
