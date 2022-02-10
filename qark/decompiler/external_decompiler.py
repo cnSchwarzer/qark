@@ -18,7 +18,7 @@ class CFR(ExternalDecompiler):
     def __init__(self):
         ExternalDecompiler.__init__(self,
                                     name="cfr",
-                                    path_to_decompiler=os.path.join(PATH_TO_DECOMPILERS, "cfr_0_124.jar"),
+                                    path_to_decompiler=os.path.join(PATH_TO_DECOMPILERS, "cfr_0_152.jar"),
                                     command="java -jar {path_to_decompiler} {jar} --outputdir {build_directory}/cfr")
 
 
