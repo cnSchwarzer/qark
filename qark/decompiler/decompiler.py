@@ -197,7 +197,7 @@ class Decompiler(object):
         dex2jar_command = escape_windows_path(DEX2JAR_COMMAND.format(dex2jar_path=os.path.join(DEX2JAR_PATH,
                                                                                                "d2j-dex2jar.{extension}".format(
                                                                                                    extension=DEX2JAR_EXTENSION)),
-                                                                     path_to_dex=self.dex_path,
+                                                                     path_to_dex=self.path_to_source,
                                                                      build_apk=os.path.join(self.build_directory,
                                                                                             self.apk_name)))
 
