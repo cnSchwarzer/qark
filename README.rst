@@ -1,3 +1,13 @@
+Changes done in this fork and how to use
+========================
+needed to make a python venv with python3.7
+
+- changed all external decompilers to latest on 02/10/2022
+- added jadx to external decompilers
+- apktool update to 2.6.0
+- dex2jar update to 2.1.0
+- some python dependencies didnt resolv or work, so i updated just those
+
 Quick Android Review Kit
 ========================
 This tool is designed to look for several security related Android application vulnerabilities, either in source code or packaged APKs. The tool is also capable of creating "Proof-of-Concept" deployable APKs and/or ADB commands, capable of exploiting many of the vulnerabilities it finds. There is no need to root the test device, as this tool focuses on vulnerabilities that can be exploited under otherwise secure conditions.
