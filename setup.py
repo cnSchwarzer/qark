@@ -23,16 +23,16 @@ setup(
         QARK_DIR: [
             os.path.join("lib", "decompilers", "*.jar"),  # include any decompiler jar files
             os.path.join("lib", "apktool", "*.jar"),  # include apktool
-            os.path.join("lib", "dex2jar-2.0", "*"),  # include dex2jar
-            os.path.join("lib", "dex2jar-2.0", "lib", "*"),  # include dex2jar
+            os.path.join("lib", "dex2jar-2.1", "*"),  # include dex2jar
+            os.path.join("lib", "dex2jar-2.1", "lib", "*"),  # include dex2jar
             os.path.join("templates", "*.jinja"),  # include the reporting template files
+            "lib/decompilers/jadx-1.4.5/**"
         ] + exploit_apk_files,  # include all the java files required for creating an exploit APK
     },
     install_requires=[
         "requests[security]",
         "pluginbase",
         "jinja2",
-        "enum34; python_version < '3.4'",
         "javalang",
         "click",
         "six",
@@ -56,6 +56,6 @@ setup(
         "Operating System :: Microsoft :: Windows",
         "Operating System :: Unix",
         "Programming Language :: Python :: 2.7",
-        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
     ]
 )

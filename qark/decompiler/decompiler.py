@@ -38,7 +38,7 @@ def escape_windows_path(path):
         except Exception:
             path = path.encode('unicode-escape')
 
-    return path
+    return path.decode().replace('\\\\', '/')
 
 
 class Decompiler(object):
@@ -119,6 +119,7 @@ class Decompiler(object):
         try:
             retcode = subprocess.call(shlex.split(decompiler_command))
         except Exception:
+            print(decompiler_command)
             log.exception("%s failed to finish decompiling, continuing", decompiler.name)
         else:
             if retcode != 0:
@@ -149,6 +150,7 @@ class Decompiler(object):
                                                                              path_to_source=self.path_to_source,
                                                                              build_directory=os.path.join(
                                                                                  self.build_directory, "apktool")))
+
         log.debug("Calling APKTool with following command")
         log.debug(custom_apktool_command)
         try:

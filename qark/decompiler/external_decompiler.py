@@ -17,7 +17,7 @@ class Jadx(ExternalDecompiler):
     def __init__(self):
         ExternalDecompiler.__init__(self,
                                     name="jadx",
-                                    path_to_decompiler="/bin/jadx",
+                                    path_to_decompiler=os.path.join(PATH_TO_DECOMPILERS, "jadx-1.4.5", "bin", "jadx.bat"),
                                     command="{path_to_decompiler} {jar} --deobf -d {build_directory}/jadx")
 
 class CFR(ExternalDecompiler):
@@ -46,4 +46,4 @@ class Fernflower(ExternalDecompiler):
                                     command="java -jar {path_to_decompiler} -ren=1 {jar} {build_directory}/fernflower")
 
 
-DECOMPILERS = (Jadx(),CFR(), Procyon(), Fernflower())
+DECOMPILERS = (Jadx(), CFR(), Procyon(), Fernflower())
